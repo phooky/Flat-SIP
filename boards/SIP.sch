@@ -1,0 +1,376 @@
+EESchema Schematic File Version 4
+LIBS:SIP-cache
+EELAYER 26 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 10
+Title "Sandin Image Processor/Input and Sync Stripper"
+Date "2018-10-17"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 2200 1250 1100 700 
+U 5BC7EA60
+F0 "Input" 50
+F1 "Input.sch" 50
+F2 "Z" I L 2200 1600 50 
+F3 "B" I R 3300 1600 50 
+$EndSheet
+$Comp
+L Connector:Conn_Coaxial JI1
+U 1 1 5BC7EBA0
+P 1000 1350
+F 0 "JI1" H 930 1588 50  0000 C CNN
+F 1 "Conn_Coaxial" H 930 1497 50  0000 C CNN
+F 2 "" H 1000 1350 50  0001 C CNN
+F 3 " ~" H 1000 1350 50  0001 C CNN
+	1    1000 1350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BC7EDA5
+P 1600 1900
+F 0 "#PWR?" H 1600 1650 50  0001 C CNN
+F 1 "GND" H 1605 1727 50  0000 C CNN
+F 2 "" H 1600 1900 50  0001 C CNN
+F 3 "" H 1600 1900 50  0001 C CNN
+	1    1600 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_US R1
+U 1 1 5BC7EE1E
+P 1600 1600
+F 0 "R1" H 1532 1646 50  0000 R CNN
+F 1 "100" H 1532 1555 50  0000 R CNN
+F 2 "" H 1600 1600 50  0001 C CNN
+F 3 "~" H 1600 1600 50  0001 C CNN
+	1    1600 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BC7EEDA
+P 1000 1700
+F 0 "#PWR?" H 1000 1450 50  0001 C CNN
+F 1 "GND" H 1005 1527 50  0000 C CNN
+F 2 "" H 1000 1700 50  0001 C CNN
+F 3 "" H 1000 1700 50  0001 C CNN
+	1    1000 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 1550 1000 1700
+Wire Wire Line
+	1200 1350 1300 1350
+Wire Wire Line
+	1600 1350 1600 1450
+Wire Wire Line
+	1600 1750 1600 1900
+Wire Wire Line
+	1750 1600 2200 1600
+$Sheet
+S 2050 2500 1000 750 
+U 5BC9C4B4
+F0 "Sync Stripper" 50
+F1 "SyncStripper.sch" 50
+F2 "A" I L 2050 2900 50 
+F3 "B" O R 3050 2900 50 
+$EndSheet
+Wire Wire Line
+	1300 1350 1300 2900
+Wire Wire Line
+	1300 2900 2050 2900
+Connection ~ 1300 1350
+Wire Wire Line
+	1300 1350 1600 1350
+Wire Wire Line
+	3050 2900 3800 2900
+Wire Wire Line
+	3800 2900 3800 2550
+Wire Wire Line
+	3800 1600 3300 1600
+$Sheet
+S 4250 1250 1000 700 
+U 5BCA510D
+F0 "Vertical Filter Amp" 50
+F1 "VerticalFilterAmp.sch" 50
+F2 "B" I L 4250 1600 50 
+F3 "G" O R 5250 1600 50 
+$EndSheet
+$Sheet
+S 4250 2200 1000 700 
+U 5BCA5116
+F0 "Horizontal Filter Amp" 50
+F1 "HorizontalFilterAmp.sch" 50
+F2 "B" I L 4250 2550 50 
+F3 "F" O R 5250 2550 50 
+$EndSheet
+Wire Wire Line
+	3800 1600 4250 1600
+Connection ~ 3800 1600
+Wire Wire Line
+	4250 2550 3800 2550
+Connection ~ 3800 2550
+Wire Wire Line
+	3800 2550 3800 1600
+$Comp
+L Device:R_US R?
+U 1 1 5BCB0BA6
+P 5900 850
+F 0 "R?" V 5695 850 50  0000 C CNN
+F 1 "27" V 5786 850 50  0000 C CNN
+F 2 "" V 5940 840 50  0001 C CNN
+F 3 "~" H 5900 850 50  0001 C CNN
+	1    5900 850 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5BCB0C2D
+P 5900 1200
+F 0 "R?" V 5695 1200 50  0000 C CNN
+F 1 "27" V 5786 1200 50  0000 C CNN
+F 2 "" V 5940 1190 50  0001 C CNN
+F 3 "~" H 5900 1200 50  0001 C CNN
+	1    5900 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5BCB0CDE
+P 5900 1600
+F 0 "R?" V 5695 1600 50  0000 C CNN
+F 1 "27" V 5786 1600 50  0000 C CNN
+F 2 "" V 5940 1590 50  0001 C CNN
+F 3 "~" H 5900 1600 50  0001 C CNN
+	1    5900 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_Zener D?
+U 1 1 5BCB0E05
+P 6350 850
+F 0 "D?" H 6350 1066 50  0000 C CNN
+F 1 "D_Zener" H 6350 975 50  0000 C CNN
+F 2 "" H 6350 850 50  0001 C CNN
+F 3 "~" H 6350 850 50  0001 C CNN
+	1    6350 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial JO13
+U 1 1 5BCB0EF8
+P 6400 1200
+F 0 "JO13" H 6499 1176 50  0000 L CNN
+F 1 "Conn_Coaxial" H 6499 1085 50  0000 L CNN
+F 2 "" H 6400 1200 50  0001 C CNN
+F 3 " ~" H 6400 1200 50  0001 C CNN
+	1    6400 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial JO14
+U 1 1 5BCB0F5B
+P 6400 1600
+F 0 "JO14" H 6499 1576 50  0000 L CNN
+F 1 "Conn_Coaxial" H 6499 1485 50  0000 L CNN
+F 2 "" H 6400 1600 50  0001 C CNN
+F 3 " ~" H 6400 1600 50  0001 C CNN
+	1    6400 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BCB1088
+P 6700 850
+F 0 "#PWR?" H 6700 600 50  0001 C CNN
+F 1 "GND" V 6705 722 50  0000 R CNN
+F 2 "" H 6700 850 50  0001 C CNN
+F 3 "" H 6700 850 50  0001 C CNN
+	1    6700 850 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6700 850  6600 850 
+Wire Wire Line
+	6600 850  6600 1400
+Wire Wire Line
+	6600 1400 6400 1400
+Connection ~ 6600 850 
+Wire Wire Line
+	6600 850  6500 850 
+Wire Wire Line
+	6600 1400 6600 1800
+Wire Wire Line
+	6600 1800 6400 1800
+Connection ~ 6600 1400
+Wire Wire Line
+	6200 1600 6050 1600
+Wire Wire Line
+	6200 1200 6050 1200
+Wire Wire Line
+	6200 850  6050 850 
+Wire Wire Line
+	5750 850  5600 850 
+Wire Wire Line
+	5600 850  5600 1200
+Wire Wire Line
+	5600 1600 5750 1600
+Wire Wire Line
+	5750 1200 5600 1200
+Connection ~ 5600 1200
+Wire Wire Line
+	5600 1200 5600 1600
+$Comp
+L Device:R_US R?
+U 1 1 5BCB2490
+P 5900 2550
+F 0 "R?" V 5695 2550 50  0000 C CNN
+F 1 "27" V 5786 2550 50  0000 C CNN
+F 2 "" V 5940 2540 50  0001 C CNN
+F 3 "~" H 5900 2550 50  0001 C CNN
+	1    5900 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5BCB2496
+P 5900 2900
+F 0 "R?" V 5695 2900 50  0000 C CNN
+F 1 "27" V 5786 2900 50  0000 C CNN
+F 2 "" V 5940 2890 50  0001 C CNN
+F 3 "~" H 5900 2900 50  0001 C CNN
+	1    5900 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5BCB249C
+P 5900 3300
+F 0 "R?" V 5695 3300 50  0000 C CNN
+F 1 "27" V 5786 3300 50  0000 C CNN
+F 2 "" V 5940 3290 50  0001 C CNN
+F 3 "~" H 5900 3300 50  0001 C CNN
+	1    5900 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_Zener D?
+U 1 1 5BCB24A2
+P 6350 2550
+F 0 "D?" H 6350 2766 50  0000 C CNN
+F 1 "D_Zener" H 6350 2675 50  0000 C CNN
+F 2 "" H 6350 2550 50  0001 C CNN
+F 3 "~" H 6350 2550 50  0001 C CNN
+	1    6350 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial JO9
+U 1 1 5BCB24A8
+P 6400 2900
+F 0 "JO9" H 6499 2876 50  0000 L CNN
+F 1 "Conn_Coaxial" H 6499 2785 50  0000 L CNN
+F 2 "" H 6400 2900 50  0001 C CNN
+F 3 " ~" H 6400 2900 50  0001 C CNN
+	1    6400 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_Coaxial JO10
+U 1 1 5BCB24AE
+P 6400 3300
+F 0 "JO10" H 6499 3276 50  0000 L CNN
+F 1 "Conn_Coaxial" H 6499 3185 50  0000 L CNN
+F 2 "" H 6400 3300 50  0001 C CNN
+F 3 " ~" H 6400 3300 50  0001 C CNN
+	1    6400 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BCB24B4
+P 6700 2550
+F 0 "#PWR?" H 6700 2300 50  0001 C CNN
+F 1 "GND" V 6705 2422 50  0000 R CNN
+F 2 "" H 6700 2550 50  0001 C CNN
+F 3 "" H 6700 2550 50  0001 C CNN
+	1    6700 2550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6700 2550 6600 2550
+Wire Wire Line
+	6600 2550 6600 3100
+Wire Wire Line
+	6600 3100 6400 3100
+Connection ~ 6600 2550
+Wire Wire Line
+	6600 2550 6500 2550
+Wire Wire Line
+	6600 3100 6600 3500
+Wire Wire Line
+	6600 3500 6400 3500
+Connection ~ 6600 3100
+Wire Wire Line
+	6200 3300 6050 3300
+Wire Wire Line
+	6200 2900 6050 2900
+Wire Wire Line
+	6200 2550 6050 2550
+Wire Wire Line
+	5750 2550 5600 2550
+Wire Wire Line
+	5600 2550 5600 2900
+Wire Wire Line
+	5600 3300 5750 3300
+Wire Wire Line
+	5750 2900 5600 2900
+Connection ~ 5600 2900
+Wire Wire Line
+	5600 2900 5600 3300
+Wire Wire Line
+	5250 1600 5350 1600
+Connection ~ 5600 1600
+Wire Wire Line
+	5250 2550 5450 2550
+Connection ~ 5600 2550
+$Sheet
+S 4000 3600 950  750 
+U 5BCB4888
+F0 "Blanking and Burst Amp" 50
+F1 "BlankingAndBurstAmp.sch" 50
+F2 "F" I L 4000 3800 50 
+F3 "G" I L 4000 4150 50 
+$EndSheet
+Wire Wire Line
+	5450 2550 5450 3500
+Wire Wire Line
+	5450 3500 3900 3500
+Wire Wire Line
+	3900 3500 3900 3800
+Wire Wire Line
+	3900 3800 4000 3800
+Connection ~ 5450 2550
+Wire Wire Line
+	5450 2550 5600 2550
+Wire Wire Line
+	5350 1600 5350 3400
+Wire Wire Line
+	5350 3400 3800 3400
+Wire Wire Line
+	3800 3400 3800 4150
+Wire Wire Line
+	3800 4150 4000 4150
+Connection ~ 5350 1600
+Wire Wire Line
+	5350 1600 5600 1600
+$EndSCHEMATC

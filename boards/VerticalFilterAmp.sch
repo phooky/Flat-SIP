@@ -1,0 +1,278 @@
+EESchema Schematic File Version 4
+LIBS:SIP-cache
+EELAYER 26 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 6 10
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:LM6172 U?
+U 1 1 5BCA52BB
+P 4700 3700
+F 0 "U?" H 4700 3333 50  0000 C CNN
+F 1 "LM6172" H 4700 3424 50  0000 C CNN
+F 2 "" H 4700 3700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm6172.pdf" H 4700 3700 50  0001 C CNN
+	1    4700 3700
+	1    0    0    1   
+$EndComp
+$Sheet
+S 5650 3400 500  550 
+U 5BCA535E
+F0 "sheet5BCA535A" 50
+F1 "StandardDriver.sch" 50
+F2 "IN" I L 5650 3700 50 
+F3 "OUT" O R 6150 3700 50 
+$EndSheet
+$Comp
+L Device:R_US R?
+U 1 1 5BCA537D
+P 5050 3050
+F 0 "R?" V 4845 3050 50  0000 C CNN
+F 1 "2.7K" V 4936 3050 50  0000 C CNN
+F 2 "" V 5090 3040 50  0001 C CNN
+F 3 "~" H 5050 3050 50  0001 C CNN
+	1    5050 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5BCA543E
+P 4300 3050
+F 0 "R?" V 4095 3050 50  0000 C CNN
+F 1 "10K" V 4186 3050 50  0000 C CNN
+F 2 "" V 4340 3040 50  0001 C CNN
+F 3 "~" H 4300 3050 50  0001 C CNN
+	1    4300 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4150 3050 3950 3050
+Wire Wire Line
+	3950 3050 3950 3600
+Wire Wire Line
+	3950 3600 4400 3600
+Wire Wire Line
+	4450 3050 4550 3050
+Wire Wire Line
+	5200 3050 5300 3050
+Wire Wire Line
+	5300 3050 5300 3700
+Wire Wire Line
+	5300 3700 5000 3700
+Wire Wire Line
+	5300 3700 5650 3700
+Connection ~ 5300 3700
+$Comp
+L Device:R_POT_US RV?
+U 1 1 5BCA5542
+P 5300 4350
+F 0 "RV?" H 5232 4304 50  0000 R CNN
+F 1 "15K" H 5232 4395 50  0000 R CNN
+F 2 "" H 5300 4350 50  0001 C CNN
+F 3 "~" H 5300 4350 50  0001 C CNN
+	1    5300 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BCA55A7
+P 5300 4700
+F 0 "#PWR?" H 5300 4450 50  0001 C CNN
+F 1 "GND" H 5305 4527 50  0000 C CNN
+F 2 "" H 5300 4700 50  0001 C CNN
+F 3 "" H 5300 4700 50  0001 C CNN
+	1    5300 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 4700 5300 4500
+Wire Wire Line
+	5300 4200 5300 3700
+$Comp
+L Device:R_US R?
+U 1 1 5BCA5671
+P 4550 4350
+F 0 "R?" V 4345 4350 50  0000 C CNN
+F 1 "10K" V 4436 4350 50  0000 C CNN
+F 2 "" V 4590 4340 50  0001 C CNN
+F 3 "~" H 4550 4350 50  0001 C CNN
+	1    4550 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 4350 4700 4350
+Wire Wire Line
+	4400 4350 4250 4350
+Wire Wire Line
+	4250 4350 4250 3800
+Wire Wire Line
+	4250 3800 4400 3800
+$Comp
+L Device:C C?
+U 1 1 5BCA585A
+P 4550 2650
+F 0 "C?" H 4300 2750 50  0000 L CNN
+F 1 ".05uF" H 4200 2650 50  0000 L CNN
+F 2 "" H 4588 2500 50  0001 C CNN
+F 3 "~" H 4550 2650 50  0001 C CNN
+	1    4550 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5BCA5A8B
+P 4800 2650
+F 0 "D?" V 4754 2729 50  0000 L CNN
+F 1 "D" V 4845 2729 50  0000 L CNN
+F 2 "" H 4800 2650 50  0001 C CNN
+F 3 "~" H 4800 2650 50  0001 C CNN
+	1    4800 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BCA5BA5
+P 4550 2300
+F 0 "#PWR?" H 4550 2050 50  0001 C CNN
+F 1 "GND" H 4555 2127 50  0000 C CNN
+F 2 "" H 4550 2300 50  0001 C CNN
+F 3 "" H 4550 2300 50  0001 C CNN
+	1    4550 2300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 2300 4550 2400
+Wire Wire Line
+	4800 2500 4800 2400
+Wire Wire Line
+	4800 2400 4550 2400
+Connection ~ 4550 2400
+Wire Wire Line
+	4550 2400 4550 2500
+Wire Wire Line
+	4550 2800 4550 3050
+Connection ~ 4550 3050
+Wire Wire Line
+	4550 3050 4800 3050
+Wire Wire Line
+	4800 2800 4800 3050
+Connection ~ 4800 3050
+Wire Wire Line
+	4800 3050 4900 3050
+$Comp
+L Device:R_US R?
+U 1 1 5BCA6118
+P 3700 3800
+F 0 "R?" V 3495 3800 50  0000 C CNN
+F 1 "R_US" V 3586 3800 50  0000 C CNN
+F 2 "" V 3740 3790 50  0001 C CNN
+F 3 "~" H 3700 3800 50  0001 C CNN
+	1    3700 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5BCA6199
+P 3100 3800
+F 0 "R?" V 2895 3800 50  0000 C CNN
+F 1 "R_US" V 2986 3800 50  0000 C CNN
+F 2 "" V 3140 3790 50  0001 C CNN
+F 3 "~" H 3100 3800 50  0001 C CNN
+	1    3100 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5BCA61F8
+P 2800 4050
+F 0 "R?" H 2868 4096 50  0000 L CNN
+F 1 "R_US" H 2868 4005 50  0000 L CNN
+F 2 "" V 2840 4040 50  0001 C CNN
+F 3 "~" H 2800 4050 50  0001 C CNN
+	1    2800 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C?
+U 1 1 5BCA625D
+P 2500 3800
+F 0 "C?" V 2752 3800 50  0000 C CNN
+F 1 "CP1" V 2661 3800 50  0000 C CNN
+F 2 "" H 2500 3800 50  0001 C CNN
+F 3 "~" H 2500 3800 50  0001 C CNN
+	1    2500 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5BCA6305
+P 3400 4050
+F 0 "C?" H 3515 4096 50  0000 L CNN
+F 1 "C" H 3515 4005 50  0000 L CNN
+F 2 "" H 3438 3900 50  0001 C CNN
+F 3 "~" H 3400 4050 50  0001 C CNN
+	1    3400 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BCA63C4
+P 2800 4400
+F 0 "#PWR?" H 2800 4150 50  0001 C CNN
+F 1 "GND" H 2805 4227 50  0000 C CNN
+F 2 "" H 2800 4400 50  0001 C CNN
+F 3 "" H 2800 4400 50  0001 C CNN
+	1    2800 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BCA640A
+P 3400 4350
+F 0 "#PWR?" H 3400 4100 50  0001 C CNN
+F 1 "GND" H 3405 4177 50  0000 C CNN
+F 2 "" H 3400 4350 50  0001 C CNN
+F 3 "" H 3400 4350 50  0001 C CNN
+	1    3400 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 4350 3400 4200
+Wire Wire Line
+	2800 4400 2800 4200
+Wire Wire Line
+	2650 3800 2800 3800
+Wire Wire Line
+	3250 3800 3400 3800
+Wire Wire Line
+	3850 3800 4250 3800
+Connection ~ 4250 3800
+Wire Wire Line
+	3400 3900 3400 3800
+Connection ~ 3400 3800
+Wire Wire Line
+	3400 3800 3550 3800
+Wire Wire Line
+	2800 3900 2800 3800
+Connection ~ 2800 3800
+Wire Wire Line
+	2800 3800 2950 3800
+Text HLabel 2200 3800 0    50   Input ~ 0
+B
+Wire Wire Line
+	2200 3800 2350 3800
+Text HLabel 6500 3700 2    50   Output ~ 0
+G
+Wire Wire Line
+	6150 3700 6500 3700
+$EndSCHEMATC

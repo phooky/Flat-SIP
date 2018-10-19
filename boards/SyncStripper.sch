@@ -1,0 +1,291 @@
+EESchema Schematic File Version 4
+LIBS:SIP-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 10
+Title "Sandin Image Processor/Sync Stripper"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 2450 3500 0    50   Input ~ 0
+A
+Text HLabel 5850 3600 2    50   Output ~ 0
+B
+$Comp
+L Amplifier_Operational:LM6172 U?
+U 1 1 5BCA5CA5
+P 4550 3600
+F 0 "U?" H 4550 3967 50  0000 C CNN
+F 1 "LM6172" H 4550 3876 50  0000 C CNN
+F 2 "" H 4550 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm6172.pdf" H 4550 3600 50  0001 C CNN
+	1    4550 3600
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 5000 3300 500  550 
+U 5BCA0111
+F0 "sheet5BCA010D" 50
+F1 "StandardDriver.sch" 50
+F2 "IN" I L 5000 3600 50 
+F3 "OUT" O R 5500 3600 50 
+$EndSheet
+Wire Wire Line
+	4850 3600 4900 3600
+Wire Wire Line
+	5500 3600 5650 3600
+$Comp
+L Connector:Conn_Coaxial JO7
+U 1 1 5BCA0182
+P 6950 2450
+F 0 "JO7" H 7049 2426 50  0000 L CNN
+F 1 "Conn_Coaxial" H 7049 2335 50  0000 L CNN
+F 2 "" H 6950 2450 50  0001 C CNN
+F 3 " ~" H 6950 2450 50  0001 C CNN
+	1    6950 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5BCA026E
+P 6500 2450
+F 0 "R?" V 6295 2450 50  0000 C CNN
+F 1 "27" V 6386 2450 50  0000 C CNN
+F 2 "" V 6540 2440 50  0001 C CNN
+F 3 "~" H 6500 2450 50  0001 C CNN
+	1    6500 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BCA04DE
+P 6950 2800
+F 0 "#PWR?" H 6950 2550 50  0001 C CNN
+F 1 "GND" H 6955 2627 50  0000 C CNN
+F 2 "" H 6950 2800 50  0001 C CNN
+F 3 "" H 6950 2800 50  0001 C CNN
+	1    6950 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 2650 6950 2800
+Wire Wire Line
+	6750 2450 6650 2450
+$Comp
+L Connector:Conn_Coaxial JO8
+U 1 1 5BCA0762
+P 6950 3250
+F 0 "JO8" H 7049 3226 50  0000 L CNN
+F 1 "Conn_Coaxial" H 7049 3135 50  0000 L CNN
+F 2 "" H 6950 3250 50  0001 C CNN
+F 3 " ~" H 6950 3250 50  0001 C CNN
+	1    6950 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5BCA0768
+P 6500 3250
+F 0 "R?" V 6295 3250 50  0000 C CNN
+F 1 "27" V 6386 3250 50  0000 C CNN
+F 2 "" V 6540 3240 50  0001 C CNN
+F 3 "~" H 6500 3250 50  0001 C CNN
+	1    6500 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BCA076E
+P 6950 3600
+F 0 "#PWR?" H 6950 3350 50  0001 C CNN
+F 1 "GND" H 6955 3427 50  0000 C CNN
+F 2 "" H 6950 3600 50  0001 C CNN
+F 3 "" H 6950 3600 50  0001 C CNN
+	1    6950 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3450 6950 3600
+Wire Wire Line
+	6750 3250 6650 3250
+Wire Wire Line
+	5650 3600 5650 2800
+Wire Wire Line
+	5650 2800 6100 2800
+Wire Wire Line
+	6100 2800 6100 2450
+Wire Wire Line
+	6100 2450 6350 2450
+Connection ~ 5650 3600
+Wire Wire Line
+	5650 3600 5850 3600
+Wire Wire Line
+	6100 2800 6100 3250
+Wire Wire Line
+	6100 3250 6350 3250
+Connection ~ 6100 2800
+$Comp
+L Device:R_POT_US R4
+U 1 1 5BCA0965
+P 4500 5200
+F 0 "R4" V 4388 5200 50  0000 C CNN
+F 1 "50K" V 4297 5200 50  0000 C CNN
+F 2 "" H 4500 5200 50  0001 C CNN
+F 3 "~" H 4500 5200 50  0001 C CNN
+	1    4500 5200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:CP1 C?
+U 1 1 5BCA0CB3
+P 3800 4650
+F 0 "C?" H 3685 4604 50  0000 R CNN
+F 1 "20uF" H 3685 4695 50  0000 R CNN
+F 2 "" H 3800 4650 50  0001 C CNN
+F 3 "~" H 3800 4650 50  0001 C CNN
+	1    3800 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5BCA0DC4
+P 4650 4100
+F 0 "D?" H 4650 3884 50  0000 C CNN
+F 1 "D" H 4650 3975 50  0000 C CNN
+F 2 "" H 4650 4100 50  0001 C CNN
+F 3 "~" H 4650 4100 50  0001 C CNN
+	1    4650 4100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4800 4100 4900 4100
+Wire Wire Line
+	4900 4100 4900 3600
+Connection ~ 4900 3600
+Wire Wire Line
+	4900 3600 5000 3600
+$Comp
+L power:GND #PWR?
+U 1 1 5BCA11AF
+P 3800 5250
+F 0 "#PWR?" H 3800 5000 50  0001 C CNN
+F 1 "GND" H 3805 5077 50  0000 C CNN
+F 2 "" H 3800 5250 50  0001 C CNN
+F 3 "" H 3800 5250 50  0001 C CNN
+	1    3800 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5BCA123D
+P 4500 4600
+F 0 "R?" V 4295 4600 50  0000 C CNN
+F 1 "4.7K" V 4386 4600 50  0000 C CNN
+F 2 "" V 4540 4590 50  0001 C CNN
+F 3 "~" H 4500 4600 50  0001 C CNN
+	1    4500 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4250 3700 3800 3700
+Wire Wire Line
+	3800 3700 3800 4100
+Wire Wire Line
+	4500 4100 4250 4100
+Connection ~ 3800 4100
+Wire Wire Line
+	3800 4100 3800 4500
+Wire Wire Line
+	4250 4100 4250 4600
+Wire Wire Line
+	4250 4600 4350 4600
+Connection ~ 4250 4100
+Wire Wire Line
+	4250 4100 3800 4100
+Wire Wire Line
+	4650 4600 4750 4600
+Wire Wire Line
+	4750 4600 4750 5200
+Wire Wire Line
+	4750 5200 4650 5200
+Wire Wire Line
+	4350 5200 4100 5200
+Wire Wire Line
+	3800 5200 3800 5250
+Wire Wire Line
+	3800 4800 3800 5200
+Connection ~ 3800 5200
+Wire Wire Line
+	4500 5050 4500 4950
+Wire Wire Line
+	4500 4950 4100 4950
+Wire Wire Line
+	4100 4950 4100 5200
+Connection ~ 4100 5200
+Wire Wire Line
+	4100 5200 3800 5200
+$Comp
+L Device:CP1 C?
+U 1 1 5BCA29B1
+P 3350 3500
+F 0 "C?" V 3602 3500 50  0000 C CNN
+F 1 "25uF" V 3511 3500 50  0000 C CNN
+F 2 "" H 3350 3500 50  0001 C CNN
+F 3 "~" H 3350 3500 50  0001 C CNN
+	1    3350 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5BCA2A51
+P 2850 3500
+F 0 "R?" V 2645 3500 50  0000 C CNN
+F 1 "100" V 2736 3500 50  0000 C CNN
+F 2 "" V 2890 3490 50  0001 C CNN
+F 3 "~" H 2850 3500 50  0001 C CNN
+	1    2850 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 3500 2700 3500
+Wire Wire Line
+	3000 3500 3200 3500
+Wire Wire Line
+	3500 3500 3800 3500
+$Comp
+L Device:R_US R?
+U 1 1 5BCA3DDE
+P 3800 3200
+F 0 "R?" H 3868 3246 50  0000 L CNN
+F 1 "1K" H 3868 3155 50  0000 L CNN
+F 2 "" V 3840 3190 50  0001 C CNN
+F 3 "~" H 3800 3200 50  0001 C CNN
+	1    3800 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5BCA3E47
+P 3800 2850
+F 0 "#PWR?" H 3800 2600 50  0001 C CNN
+F 1 "GND" H 3805 2677 50  0000 C CNN
+F 2 "" H 3800 2850 50  0001 C CNN
+F 3 "" H 3800 2850 50  0001 C CNN
+	1    3800 2850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3800 2850 3800 3050
+Wire Wire Line
+	3800 3350 3800 3500
+Connection ~ 3800 3500
+Wire Wire Line
+	3800 3500 4250 3500
+$EndSCHEMATC
