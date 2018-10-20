@@ -275,4 +275,47 @@ Text HLabel 6500 3700 2    50   Output ~ 0
 G
 Wire Wire Line
 	6150 3700 6500 3700
+$Comp
+L Amplifier_Operational:LM6172 U?
+U 3 1 5BCFED9F
+P 1150 7000
+AR Path="/5BC7EA60/5BCFED9F" Ref="U?"  Part="3" 
+AR Path="/5BCA510D/5BCFED9F" Ref="U3"  Part="3" 
+F 0 "U3" H 1108 7046 50  0000 L CNN
+F 1 "LM6172" H 1108 6955 50  0000 L CNN
+F 2 "" H 1150 7000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm6172.pdf" H 1150 7000 50  0001 C CNN
+	3    1150 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5BCFEDA6
+P 1050 6500
+AR Path="/5BC7EA60/5BCFEDA6" Ref="#PWR?"  Part="1" 
+AR Path="/5BCA510D/5BCFEDA6" Ref="#PWR0114"  Part="1" 
+F 0 "#PWR0114" H 1050 6350 50  0001 C CNN
+F 1 "+12V" H 1065 6673 50  0000 C CNN
+F 2 "" H 1050 6500 50  0001 C CNN
+F 3 "" H 1050 6500 50  0001 C CNN
+	1    1050 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-12V #PWR?
+U 1 1 5BCFEDAC
+P 1050 7500
+AR Path="/5BC7EA60/5BCFEDAC" Ref="#PWR?"  Part="1" 
+AR Path="/5BCA510D/5BCFEDAC" Ref="#PWR0115"  Part="1" 
+F 0 "#PWR0115" H 1050 7600 50  0001 C CNN
+F 1 "-12V" H 1065 7673 50  0000 C CNN
+F 2 "" H 1050 7500 50  0001 C CNN
+F 3 "" H 1050 7500 50  0001 C CNN
+	1    1050 7500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1050 7500 1050 7300
+Wire Wire Line
+	1050 6700 1050 6500
 $EndSCHEMATC

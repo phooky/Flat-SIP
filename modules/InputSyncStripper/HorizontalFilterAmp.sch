@@ -15,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Amplifier_Operational:LM6172 U2
+L Amplifier_Operational:LM6172 U3
 U 2 1 5BCAE849
 P 4550 3600
-F 0 "U2" H 4550 3967 50  0000 C CNN
+F 0 "U3" H 4550 3967 50  0000 C CNN
 F 1 "LM6172" H 4550 3876 50  0000 C CNN
 F 2 "" H 4550 3600 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm6172.pdf" H 4550 3600 50  0001 C CNN
