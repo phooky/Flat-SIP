@@ -552,10 +552,10 @@ Wire Wire Line
 Wire Wire Line
 	8050 3000 8050 2650
 $Comp
-L Device:R_POT RV2
+L Device:R_POT CONTRAST1
 U 1 1 5C88A528
 P 8050 3350
-F 0 "RV2" H 7980 3396 50  0000 R CNN
+F 0 "CONTRAST1" H 7980 3396 50  0000 R CNN
 F 1 "10k" H 7980 3305 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8050 3350 50  0001 C CNN
 F 3 "~" H 8050 3350 50  0001 C CNN
@@ -658,10 +658,10 @@ Wire Wire Line
 Wire Wire Line
 	9500 3250 9400 3250
 $Comp
-L Device:R_POT RV1
+L Device:R_POT BIAS1
 U 1 1 5C896AD0
 P 7700 4100
-F 0 "RV1" H 7630 4146 50  0000 R CNN
+F 0 "BIAS1" H 7630 4146 50  0000 R CNN
 F 1 "10k" H 7630 4055 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7700 4100 50  0001 C CNN
 F 3 "~" H 7700 4100 50  0001 C CNN
@@ -1084,10 +1084,10 @@ F 3 "" H 10300 5300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_Coaxial J2
+L Connector:Conn_Coaxial VIN1
 U 1 1 5C984FE4
 P 1550 1600
-F 0 "J2" V 1787 1530 50  0000 C CNN
+F 0 "VIN1" V 1787 1530 50  0000 C CNN
 F 1 "Conn_Coaxial" V 1696 1530 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1550 1600 50  0001 C CNN
 F 3 " ~" H 1550 1600 50  0001 C CNN
@@ -1252,10 +1252,10 @@ Wire Wire Line
 	1350 5450 1850 5450
 Connection ~ 1850 5450
 $Comp
-L Connector:Conn_Coaxial J7
+L Connector:Conn_Coaxial VOUT1
 U 1 1 5C948047
 P 10350 3250
-F 0 "J7" H 10449 3226 50  0000 L CNN
+F 0 "VOUT1" H 10449 3226 50  0000 L CNN
 F 1 "Conn_Coaxial" H 10449 3135 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10350 3250 50  0001 C CNN
 F 3 " ~" H 10350 3250 50  0001 C CNN
@@ -1263,10 +1263,10 @@ F 3 " ~" H 10350 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR01
 U 1 1 5CA9992F
 P 10350 3550
-F 0 "#PWR?" H 10350 3300 50  0001 C CNN
+F 0 "#PWR01" H 10350 3300 50  0001 C CNN
 F 1 "GND" H 10355 3377 50  0000 C CNN
 F 2 "" H 10350 3550 50  0001 C CNN
 F 3 "" H 10350 3550 50  0001 C CNN
@@ -1278,10 +1278,10 @@ Wire Wire Line
 Wire Wire Line
 	9950 3250 10150 3250
 $Comp
-L Connector:Conn_Coaxial J3
+L Connector:Conn_Coaxial CSYNC1
 U 1 1 5C94859F
 P 10300 5000
-F 0 "J3" H 10399 4976 50  0000 L CNN
+F 0 "CSYNC1" H 10399 4976 50  0000 L CNN
 F 1 "Conn_Coaxial" H 10399 4885 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10300 5000 50  0001 C CNN
 F 3 " ~" H 10300 5000 50  0001 C CNN
@@ -1292,4 +1292,48 @@ Wire Wire Line
 	9850 5000 10100 5000
 Wire Wire Line
 	10300 5300 10300 5200
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5CAE0C1E
+P 7150 6000
+F 0 "H4" H 7250 6046 50  0000 L CNN
+F 1 "MountingHole" H 7250 5955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7150 6000 50  0001 C CNN
+F 3 "~" H 7150 6000 50  0001 C CNN
+	1    7150 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5CAE0DDB
+P 7150 5800
+F 0 "H3" H 7250 5846 50  0000 L CNN
+F 1 "MountingHole" H 7250 5755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7150 5800 50  0001 C CNN
+F 3 "~" H 7150 5800 50  0001 C CNN
+	1    7150 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5CAE0E9D
+P 7150 5600
+F 0 "H2" H 7250 5646 50  0000 L CNN
+F 1 "MountingHole" H 7250 5555 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7150 5600 50  0001 C CNN
+F 3 "~" H 7150 5600 50  0001 C CNN
+	1    7150 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5CAE0F92
+P 7150 5400
+F 0 "H1" H 7250 5446 50  0000 L CNN
+F 1 "MountingHole" H 7250 5355 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7150 5400 50  0001 C CNN
+F 3 "~" H 7150 5400 50  0001 C CNN
+	1    7150 5400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
